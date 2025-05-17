@@ -1,0 +1,26 @@
+/* style.css */
+body {
+    font-family: sans-serif;
+  }
+  
+  h1 {
+    color: blue;
+  }
+  
+  p {
+    margin-bottom: 20px;
+  }
+
+  section.bordes {
+    margin-top: 50;
+    background-color: #fff9f9;
+  }
+
+  .imagenes {
+    width: 100%; /* O ancho deseado */
+  }
+  .imagenes img {
+    width: 30%; /* O ancho deseado */
+    display: inline-block;
+    margin: 5px; /* Espacio entre imágenes */
+  }
