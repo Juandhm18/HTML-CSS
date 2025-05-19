@@ -14,7 +14,6 @@ body {
 
   section.bordes {
     margin-top: 50;
-    /* background-color: #fff9f9; */
   }
 
   .imagenes {
@@ -32,6 +31,30 @@ body {
     height: 430;
   }
 
+  ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: lightblue;
+  }
+
+  li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+  }
+
+  a:hover:not(.active) {
+    background-color: #2985af;
+  }
+  
+  .active {
+    background-color:#04AA6D;
+  }
+  
   section img{
     width: 0px;
     flex-grow: 1;
