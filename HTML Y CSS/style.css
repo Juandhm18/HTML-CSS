@@ -1,6 +1,7 @@
 /* style.css */
 body {
     font-family: sans-serif;
+    background-color: lightblue;
   }
   
   h1 {
@@ -13,7 +14,7 @@ body {
 
   section.bordes {
     margin-top: 50;
-    background-color: #fff9f9;
+    /* background-color: #fff9f9; */
   }
 
   .imagenes {
@@ -23,4 +24,28 @@ body {
     width: 30%; /* O ancho deseado */
     display: inline-block;
     margin: 5px; /* Espacio entre imágenes */
+  }
+
+  section.img { 
+    display: flex;
+    width: 600;
+    height: 430;
+  }
+
+  section img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+  }
+  section img:hover{
+    cursor: crosshair;
+    opacity: 1;
+    width: 300px;
+    filter: contrast(120%);
+  }
+
+  a{
+    text-decoration: none;
   }
