@@ -47,7 +47,7 @@ body {
     text-decoration: none;
   }
 
-  a:hover:not(.active) {
+  li.bar:hover:not(.active) {
     background-color: #2985af;
   }
   
@@ -71,4 +71,17 @@ body {
 
   a{
     text-decoration: none;
+  }
+
+  #gitLink{
+    width: 50px;
+    height: 50px;
+  }
+
+  .lista{
+    display:flex;
+  }
+
+  .bar{
+    flex-grow: 1;
   }

@@ -9,6 +9,14 @@
     <main>
         <header>
             <h1>Hi World!</h1>
+            <label for="colors">Pick a color (preferably a red tone):</label>
+            <input type="color" list="redColors" id="colors" />
+            <datalist id="redColors">
+                <option value="#800000"></option>
+                <option value="#8B0000"></option>
+                <option value="#A52A2A"></option>
+                <option value="#DC143C"></option>
+            </datalist>
         </header>
         <nav>
             <ul>
@@ -37,7 +45,7 @@
                 <img src="https://acortar.link/kjiDAs" alt="algo">
         </section>
         <section>
-            <ol>
+            <ol class="lista">
                 <li class="bar"><a href="https://copilot.microsoft.com/">copilot</a></li>
                 <li class="bar"><a href="https://www.365scores.com/es">365 Score</a></li>
                 <li class="bar"><a href="https://github.com/">github</a></li>
@@ -45,14 +53,7 @@
                 <li class="bar"><a href="https://www.w3schools.com/">w3schools</a></li>
             </ol>
         </section>
-    </main>
-    <label for="colors">Pick a color (preferably a red tone):</label>
-    <input type="color" list="redColors" id="colors" />
-    <datalist id="redColors">
-        <option value="#800000"></option>
-        <option value="#8B0000"></option>
-        <option value="#A52A2A"></option>
-        <option value="#DC143C"></option>
-    </datalist>
+
+    </main>   
 </body>
 </html>

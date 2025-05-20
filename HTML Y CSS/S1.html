@@ -4,14 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styleS1.css">
 </head>
 <body>
-    <h1>Hello</h1>
+    <h1>Hola mundo</h1>
+    <p>Esta es mi primera página en HTML.</p>
+    <ul>
+        <li>Mango</li>
+        <li>Fresa</li>
+        <li>Piña</li>
+        <li>Kiwi</li>
+        <li>Manzana</li>
+    </ul>
+    <ol>
+        <li>Calentar el agua</li>
+        <li>Preparar el café en el filtro</li>
+        <li>Vierte el agua en el filtro</li>
+        <li>Espere a que se asiente el café</li>
+        <li>Sirve en una taza</li>
+        <li>Añade azúcar o leche al gusto..</li>
+    </ol>
+    <div class="ImgLinks">
+        <a href="https://github.com/dashboard" target="_blank">
+        <!-- target = "_blank" abre una pestaña nueva -->
+            <img src="https://shorturl.at/tSm5h" alt="github" class="gitLink">    
+        </a>
+        <a href="https://www.google.com/?hl=es" target="_blank">
+            <img src="/HTML Y CSS/Assets/cromo.png" alt="Chrome" class="gitLink">
+        </a>
+        <a href="/HTML Y CSS/contacto.html">
+            <img src="/HTML Y CSS/Assets/agenda.png" alt="Contacto" class="gitLink">
+        </a>
+    </div>
     <nav>
+        <h2>Navegación</h2>
         <ul>
             <li><a href="/HTML Y CSS/index.html">Home</a></li>
-            <li><a>Contacto</a></li>
+            <li><a href="">Contacto</a></li>
+            <li><a href="">A cerca de</a></li>
         </ul>
     </nav>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/eaPkD86eOAE?si=d1vsWA2NpBWYAvE7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <table border="1">
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Ciudad</th>
+        </tr>
+        <tr>
+            <td>Felipe</td>
+            <td>25</td>
+            <td>Paris</td>
+        </tr>
+        <tr>
+            <td>Juan</td>
+            <td>20</td>
+            <td>Madrid</td>
+        </tr>
+        <tr>
+            <td>Kevin</td>
+            <td>23</td>
+            <td>Londres</td>
+        </tr>
+    </table>
+    <form>
+        <h3>Formulario de contacto</h3>
+        <div>
+            <label for="Name">Nombre</label>
+            <input type="text" placeholder="Name">
+        </div>
+        <div>
+            <label for="email">Email address</label>
+            <input type="email" placeholder="Email">
+        </div>
+        <div>
+            <label for="msg">Mensaje</label>
+            <textarea name="Mensajes" id=""></textarea>
+        </div>
+        <div>
+            <button>Enviar</button>
+        </div>
+    </form>
+    <form>
+        <h3>Nuevo formulario</h3>
+        <div>
+            <label for="Name">Nombre</label>
+            <input type="text" placeholder="Name">
+        </div>
+        <div>
+            <label for="email">Email address</label>
+            <input type="email" placeholder="Email">
+        </div>
+        <div>
+            <label for="password">password</label>
+            <input type="password" placeholder="Password">
+        </div>
+        <div>
+            <label for="age">Age</label>
+            <input type="number" placeholder="Age">
+        </div>
+        <div>
+            <label for="date">Date</label>
+            <input type="date" placeholder="date">
+        </div>
+        <div>
+            <label for="Masculino">M</label>
+            <input type="radio" value="option1" name="opcion">
+            <label for="femenino">F</label>
+            <input type="radio" value="option2" name="opcion">
+        </div>
+        <div>
+            <label for="city">City</label>
+            <select name="" id="">
+                <option>Medellín</option>
+            </select>
+        </div>
+        <div>
+            <button>Enviar</button>
+        </div>
+    </form>
 </body>
 </html>
