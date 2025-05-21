@@ -1,0 +1,84 @@
+.gitLink{
+    width: 70px;
+    height: 70px;
+}
+
+.ImgLinks{
+    display: flex;
+    justify-content: space-around;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  color: #f0f0f0;
+  background: linear-gradient(to top, #2c3e50, #4ca1af);  line-height: 1.6;
+}
+
+.encabezado{
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  height: 5vh;
+  background:#2f3644;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.encabezado a{
+  margin-right: 50px;
+}
+.presentacion{
+  display: flex;
+  justify-content: center;
+}
+
+.titulo{
+  background-color: rgba(0, 0, 0, 0.5);
+  width:40%;
+  margin: 300px;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.me{
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffffff;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.sub{
+  font-size: 1.5rem;
+  color: #9ec4e2;
+  margin-top: 1rem;
+  animation: fadeIn 4s ease-in-out;
+}
+
+.aboutMe{
+  justify-content: center;
+  padding: 5rem 2rem;
+  background-color: #1a1f2b;
+  border-top: 1px solid #2f3644;
+  animation: slideUp 1s ease-in-out;
+}
+
+.menu a{
+  text-decoration: none;
+  color: #d0eaff;
+}
+
+@keyframes fadeIn{
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes slideUp{
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
