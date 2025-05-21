@@ -9,21 +9,27 @@
 <body>
     <h1>Hola mundo</h1>
     <p>Esta es mi primera página en HTML.</p>
-    <ul>
-        <li>Mango</li>
-        <li>Fresa</li>
-        <li>Piña</li>
-        <li>Kiwi</li>
-        <li>Manzana</li>
-    </ul>
-    <ol>
-        <li>Calentar el agua</li>
-        <li>Preparar el café en el filtro</li>
-        <li>Vierte el agua en el filtro</li>
-        <li>Espere a que se asiente el café</li>
-        <li>Sirve en una taza</li>
-        <li>Añade azúcar o leche al gusto..</li>
-    </ol>
+    <section class="frutas">
+        <h2>Lista de Frutas</h2>
+        <ul>
+            <li>Mango</li>
+            <li>Fresa</li>
+            <li>Piña</li>
+            <li>Kiwi</li>
+            <li>Manzana</li>
+        </ul>
+    </section>
+    <section class="preparacion-cafe">
+        <h2>Cómo Preparar Café</h2>
+        <ol>
+            <li>Calentar el agua</li>
+            <li>Preparar el café en el filtro</li>
+            <li>Vierte el agua en el filtro</li>
+            <li>Espere a que se asiente el café</li>
+            <li>Sirve en una taza</li>
+            <li>Añade azúcar o leche al gusto..</li>
+        </ol>
+    </section>
     <div class="ImgLinks">
         <a href="https://github.com/dashboard" target="_blank">
         <!-- target = "_blank" abre una pestaña nueva -->
@@ -46,28 +52,23 @@
     </nav>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/eaPkD86eOAE?si=d1vsWA2NpBWYAvE7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-    <table border="1">
-        <tr>
-            <th>Nombre</th>
-            <th>Edad</th>
-            <th>Ciudad</th>
-        </tr>
-        <tr>
-            <td>Felipe</td>
-            <td>25</td>
-            <td>Paris</td>
-        </tr>
-        <tr>
-            <td>Juan</td>
-            <td>20</td>
-            <td>Madrid</td>
-        </tr>
-        <tr>
-            <td>Kevin</td>
-            <td>23</td>
-            <td>Londres</td>
-        </tr>
-    </table>
+    <section class="tabla-datos">
+        <h2>Tabla de Datos</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Ciudad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Felipe</td><td>25</td><td>París</td></tr>
+                <tr><td>Juan</td><td>20</td><td>Madrid</td></tr>
+                <tr><td>Kevin</td><td>23</td><td>Londres</td></tr>
+            </tbody>
+        </table>
+    </section>
     <form>
         <h3>Formulario de contacto</h3>
         <div>
@@ -116,10 +117,17 @@
         </div>
         <div>
             <label for="city">City</label>
-            <select name="" id="">
+            <select name="city" id="city">
                 <option>Medellín</option>
+                <option>Bogota</option>
+                <option>Cali</option>
+                <option>Barranquilla</option>
             </select>
         </div>
+        <label for="terms">
+        <input type="checkbox" id="terms" name="terms" value="yes" required>
+            Aceptar términos y condiciones.
+        </label>
         <div>
             <button>Enviar</button>
         </div>
