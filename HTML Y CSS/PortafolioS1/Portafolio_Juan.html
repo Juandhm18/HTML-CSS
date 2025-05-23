@@ -78,7 +78,7 @@
         <img class="picture" src="../Assets/proyecto.jpeg" alt="codigos">
     </section>
     <section id="questions">
-        <form action="/send" method="post">
+        <form>
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required><br>
@@ -89,7 +89,7 @@
             </div>
             <div class="form-group"> 
                 <label for="message">Message</label>
-                <textarea name="message" id="message" rows="4" required minlength="250"></textarea><br>
+                <textarea name="message" id="message" rows="4" required maxlength="250"></textarea><br>
             </div>
             <input type="submit" value="send">
         </form>

@@ -14,7 +14,6 @@ body{
   position: sticky;
   top: 0;
   overflow: hidden;
-  border-radius: 10px;
   height: 5vh;
   background:#2f3644;
   display: flex;
