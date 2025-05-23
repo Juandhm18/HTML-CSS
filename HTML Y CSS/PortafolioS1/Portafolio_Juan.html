@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My personal portafolio</title>
+    <link rel="stylesheet" href="./stylePortafolio.css">
+     <!-- <link rel="stylesheet" href="prueba.css"> -->
+</head>
+<body>
+    <header class="encabezado">
+        <div class="menu">
+            <a href="#about-me">About me</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </header>
+    <section class ="presentacion">
+        <div class="titulo">
+            <h1 class="me">Juan Diego<br>
+                Hernandez Martinez</h1>
+            <h2 class="sub">Riwi Developer</h2>
+        </div>
+    </section>
+    
+    <section class="aboutMe">
+        <Div>
+            <h2>About Me</h2>
+            <p>Hello, I'm Juan Diego and I'm an aspiring programmer with a strong passion for learning new progamming languages and tackling technical challenges. I thrive on problem-solving and constantly seek opportunities to grow and push my limits</p>
+            <p>Outside the world of programming, I'm a big fan of anime, learning new languages, and sports-each which fuels my creativity, discipline, and appreciation for diverse perspectives. I value perseverance, curiosity, and adaptability, which I belive are essential traits for both personal and professional development.</p>
+            <p>I'm excited to keep learning, building, and connecting with others who share a passion for technology and innovation.</p>
+        </Div>
+        <div>
+            
+            <section class="skills">
+            <!-- Technical Skills -->
+                <ul>
+                    <h2>Technical Skills</h2>
+                    <li>HTML</li>
+                    <li>Python</li>
+                    <li>Currently learning JavaScript</li>
+                    <li>Problem Solving</li>
+                    <li>Algorithmic Thinking</li>
+                    <li>Ability to Learn and Adapt</li>
+                    <li>Operating Systems (Windows, Linux)</li>
+                </ul>
+                <img class="nagi" src="https://i.pinimg.com/736x/d7/1d/a9/d71da990ccb25c809155c26c07b7b642.jpg" alt="Juan Diego's photo" width="200px">
+            </section>
+        </div>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <h3>Project 1: Portafolio Website</h3>
+        <p>This is my first project where I built my personal portafolio using HTML</p>
+        <h3>Project 2: Inventory</h3>
+        <p>A short program where I create an inventory in Python wtih all the funcionality.</p>
+        <table>
+            <tr>
+                <th>Project name</th>
+                <th>Technologies used</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>Portafolio Website</td>
+                <td>HTML & CSS</td>
+                <td><a href="#">View project</a></td>
+            </tr>
+            <tr>
+                <td>Inventory</td>
+                <td>Python</td>
+                <td><a href="https://github.com/Juandhm18/Python_intro/blob/main/S3_Ejercicios/PerformanceTestM1.py">View project</a></td>
+            </tr>
+        </table>
+    </section>
+    <!-- imagen representativa de proyecto -->
+    <section class="projectsection" >
+        <h2>Code</h2>
+        <img class="picture" src="../Assets/proyecto.jpeg" alt="codigos">
+    </section>
+    <section id="questions">
+        <form action="/send" method="post">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required><br>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required><br>
+            </div>
+            <div class="form-group"> 
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="4" required minlength="250"></textarea><br>
+            </div>
+            <input type="submit" value="send">
+        </form>
+    </section>
+    <footer id="contact">
+        <!-- Enlaces a redes sociales -->
+        <a href="https://github.com/Juandhm18" target="_blank">
+            <img src="../Assets/github.png" alt="github logo" width="50">
+        </a>
+    </footer>
+</body>
+</html>

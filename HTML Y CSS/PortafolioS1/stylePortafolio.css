@@ -64,12 +64,28 @@ body{
 }
 
 .aboutMe{
+  width: 100%;
   text-align: center;
   padding: 40px;
   background-color: #1a1f2b;
   border-radius: 10px;
   border-top: 1px solid #2f3644;
   animation: slideUp 1s ease-in-out;
+}
+
+.aboutMe div{
+margin-inline: 30%;
+}
+
+.skills{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.skills ul{
+  width: 40%;
 }
 
 .menu a{
@@ -85,10 +101,80 @@ body{
 
 #projects {
     text-align: center;
+    width: 100%;
     padding: 40px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(8px);
     border-radius: 8px;
+}
+
+.projectsection{
+  padding: 20px;
+  display: grid;
+  place-items: center;
+}
+
+.picture{
+  border-radius: 10px;
+  height: auto;
+  max-width: 100%;
+}
+
+table {
+   max-width: 1000px;
+   border: 1px solid #999;
+   text-align: center;
+   border-collapse: collapse;
+   margin: auto;
+}
+
+th, td {
+   border-bottom: 1px solid #999;
+   width: 25%;
+}
+
+#questions{
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #47627c;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#questions .form-group {
+  margin-bottom: 15px; 
+}
+
+#questions label{
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#questions input[type="email"],
+#questions input[type="text"],
+#questions textarea{
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+#questions input[type="submit"] {
+  background-color: #007bff; 
+  color: white; 
+  padding: 10px 15px; 
+  border: none; 
+  border-radius: 4px; 
+  cursor: pointer; 
+  font-weight: bold; 
+}
+
+#questions input[type="submit"]:hover {
+  background-color: #0056b3; 
 }
 
 @keyframes fadeIn{
