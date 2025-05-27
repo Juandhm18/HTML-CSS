@@ -1,4 +1,64 @@
+html{
+    height: 100vh;
+    overflow: hidden;
+}
+
 body{
-    background-image: url("https://media.giphy.com/media/MHboUUIoxzOKs/giphy.gif?cid=ecf05e47r11nptiiimqdcg8xxgl8yi5nsjoi8cyrxjxt2ktc&ep=v1_gifs_related&rid=giphy.gif&ct=g");
-    background-position: 10% 50%;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #222;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.section1, .section2{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.section1::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url("./Assets/fondo.jpg") top center;
+    background-size: cover;
+    transform: translateZ(-1px) scale(2.2);
+    filter: blur(2px);
+}
+
+.section1::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url("./Assets/ninja.png") top center;
+    background-size: cover;
+    padding-top: 150px;
+    transform: translateZ(-1px) scale(2.2);
+}
+
+.section1 .text{
+    top: 10%;
+    transform: translateZ(-0.5px) scale(1.5,1.6) translate(-33%, 10%);
+}
+
+.section2{
+    background: rgb(56, 49, 46);
+}
+
+.text{
+    top: 30%;
+    left: 50%;
+    position: absolute;
+    font-family: 'Franklin Gothic Heavy';
+    font-size: 15vw;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 5px 5px 70px rgba(255, 255, 255, 0.5);
+    transform: scale(1,1.1) translate(-50%, 10%);
 }
