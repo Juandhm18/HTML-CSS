@@ -1,0 +1,51 @@
+:root{
+    --graycolor:#F3F3F3;
+    --darkcolor:#191A23;
+    --greencolor:#B9FF66;
+}
+
+body{
+    padding-top: 5%;
+    gap: 70px;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    margin: 0;
+    background-color: var(--graycolor);
+}
+
+header{
+    padding: 0px 100px 0px 100px; 
+    column-gap: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+header img{
+    width: auto;
+}
+
+header nav{
+    column-gap: 40px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.Section-main{
+    padding: 0%;
+}
+
+.button{
+    border: 1px solid;
+    border-radius: 14px;
+    padding: 20px 35px;
+    gap: 40px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--darkcolor);
+}
+

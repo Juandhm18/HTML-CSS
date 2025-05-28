@@ -1,20 +1,20 @@
 :root {
-    --primary-color: #6366f1;    /* Color principal usado para elementos destacados y acciones */
-    --secondary-color: #14b8a6;  /* Color secundario para elementos complementarios */
-    --accent-color: #f43f5e;     /* Color de acento para llamadas a la acción */
-    --text-color: #e2e8f0;       /* Color principal para texto, alto contraste con el fondo */
-    --text-light: #94a3b8;       /* Color para texto secundario o menos importante */
-    --bg-color: #0f172a;         /* Color de fondo principal del sitio */
-    --bg-secondary: #1e293b;     /* Color de fondo para secciones alternativas */
-    --nav-bg: rgba(15, 23, 42, 0.95); /* Fondo semi-transparente para la navegación */
-    --card-bg: #1e293b;          /* Color de fondo para tarjetas y elementos contenedores */
-    --border-color: #334155;     /* Color para bordes y separadores */
-    --gradient-1: linear-gradient(135deg, #6366f1, #14b8a6); /* Gradiente decorativo */
-    --input-bg: #334155;         /* Color de fondo para campos de entrada */
-    --spacing-xs: 0.5rem;  /* 8px - Espaciado muy pequeño */
-    --spacing-sm: 1rem;    /* 16px - Espaciado pequeño */
-    --spacing-md: 2rem;    /* 32px - Espaciado mediano */
-    --spacing-lg: 4rem;    /* 64px - Espaciado grande */
+    --primary-color: #6366f1;   
+    --secondary-color: #14b8a6;  
+    --accent-color: #f43f5e;    
+    --text-color: #e2e8f0;      
+    --text-light: #94a3b8;      
+    --bg-color: #0f172a;        
+    --bg-secondary: #1e293b;     
+    --nav-bg: rgba(15, 23, 42, 0.95); 
+    --card-bg: #1e293b;         
+    --border-color: #334155;     
+    --gradient-1: linear-gradient(135deg, #6366f1, #14b8a6); 
+    --input-bg: #334155;        
+    --spacing-xs: 0.5rem;  
+    --spacing-sm: 1rem;   
+    --spacing-md: 2rem;    
+    --spacing-lg: 4rem;   
 }
 
 html {
