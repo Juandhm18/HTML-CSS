@@ -113,7 +113,7 @@ body {
 
 .section1 .text {
     font-size: 5rem;
-    color: var(--bg-color);
+    color: #94a3b8;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
     z-index: 1;
     transform: translateZ(-0.5px) scale(1.5);
@@ -121,7 +121,7 @@ body {
 
 .subtitle {
     font-size: 2rem;
-    color: var(--bg-color);
+    color: #94a3b8;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
     z-index: 1;
     margin-top: var(--spacing-md);

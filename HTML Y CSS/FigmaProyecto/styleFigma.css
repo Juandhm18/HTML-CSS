@@ -6,7 +6,6 @@
 
 body{
     padding-top: 5%;
-    gap: 70px;
     font-family: "Space Grotesk", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
@@ -17,7 +16,6 @@ body{
 
 header{
     padding: 0px 100px 0px 100px; 
-    column-gap: auto;
     display: flex;
     justify-content: space-between;
 }
@@ -33,15 +31,27 @@ header nav{
     flex-shrink: 0;
 }
 
-.Section-main{
-    padding: 0%;
-}
-
 .button{
     border: 1px solid;
     border-radius: 14px;
     padding: 20px 35px;
     gap: 40px;
+}
+
+.Navigation-info{
+    background-color: aqua;
+    padding: 0px 100px;
+    margin: 70px 0px;
+    display: flex;
+}
+
+.title-text{
+    align-content: flex-start;
+    row-gap: 35px;
+}
+
+.Section-main{
+    gap: 70px 0px;
 }
 
 a{
