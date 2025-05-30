@@ -56,8 +56,6 @@ body {
 }
 
 .logo {
-    background: var(--gradient-1);
-    -webkit-text-fill-color: transparent;
     font-weight: bold;
 }
 
@@ -137,6 +135,13 @@ body {
     gap: var(--spacing-lg);
     max-width: 1200px;
     margin: 0 auto;
+    text-align:justify;
+}
+
+.about-stats{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .about-text {
@@ -221,6 +226,29 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+
+.img { 
+    display: flex;
+    width: 600;
+    height: 430;
+    margin-top: 50px;
+}
+
+.img img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+.img img:hover{
+    cursor: crosshair;
+    opacity: 1;
+    width: 300px;
+    filter: contrast(120%);
+}
+
 .skills {
     padding: var(--spacing-lg) var(--spacing-md);
     background: var(--bg-secondary);
@@ -252,6 +280,7 @@ body {
     border-radius: 8px;
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
+    animation: resize 1.5s infinite alternate;
 }
 
 .skill-item:hover {
@@ -377,6 +406,15 @@ body {
     .subtitle {
         font-size: 1.5rem;
     }
+}
+
+@keyframes resize {
+  from {
+    width: 80%;
+  }
+  to {
+    width: 50%;
+  }
 }
 
 ::-webkit-scrollbar {

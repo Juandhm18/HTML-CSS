@@ -3,6 +3,9 @@
     --darkcolor:#191A23;
     --greencolor:#B9FF66;
 }
+html{
+    padding: 0px 100px;
+}
 
 body{
     padding-top: 5%;
@@ -15,7 +18,6 @@ body{
 }
 
 header{
-    padding: 0px 100px 0px 100px; 
     display: flex;
     justify-content: space-between;
 }
@@ -35,23 +37,37 @@ header nav{
     border: 1px solid;
     border-radius: 14px;
     padding: 20px 35px;
-    gap: 40px;
+}
+
+.button-bookConsul{
+    background-color: var(--darkcolor);
+    border: solid var(--darkcolor);
+}
+
+.button-bookConsul a{
+    color: antiquewhite;
 }
 
 .Navigation-info{
-    background-color: aqua;
-    padding: 0px 100px;
     margin: 70px 0px;
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .title-text{
-    align-content: flex-start;
-    row-gap: 35px;
+    width: 531px;
+    height: 481px; 
 }
 
-.Section-main{
-    gap: 70px 0px;
+.title-text p{
+    margin: 35px 0px;
+    line-height: 28px;
+}
+
+.title-text h1{
+    font-size: 60px;
+    margin: 0px;
 }
 
 a{
@@ -59,3 +75,39 @@ a{
     color: var(--darkcolor);
 }
 
+.companies{
+    display: flex;
+    justify-content: space-between;
+    filter: grayscale(1);
+}
+
+.services{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.services h2{
+    font-size: 40px;    
+    background-color: var(--greencolor);
+    border-radius: 14px;
+    padding: 7px;
+}
+
+.services p{
+    width: 580px;
+}
+
+.search-card{
+    display: flex;
+    padding: 50px;
+}
+
+.service-card h3{
+    font-size: 30px;
+    margin: 0px;
+}
+
+.service-card img{
+    margin-top: 93px;
+}
