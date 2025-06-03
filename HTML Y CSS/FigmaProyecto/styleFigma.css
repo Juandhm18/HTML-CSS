@@ -82,57 +82,77 @@ a{
 }
 
 .services {
-    text-align: center;
-    padding: 40px;
+    text-align: left;
+}
+
+.service-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    margin: 7.5% 0% 5% 0%;
 }
 
 .services h2{
-    font-size: 40px;    
+    margin: 0px;
+    font-size: 36px;    
     background-color: var(--greencolor);
     border-radius: 14px;
-    padding: 7px;
 }
 
 .services p{
     width: 580px;
+    margin: 0px;
+    font-size: 18px;
 }
 
 .service-list {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
 }
+
 
 .service-group {
     display: flex;
-    gap: 20px;
+    gap: 40px;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .service-card {
-    background: var(--graycolor);
-    padding: 20px;
-    border-radius: 8px;
-    border: soli;
-    text-align: center;
+    display: flex;
+    padding: 50px;
+    border-radius: 14px;
+    border: solid 0.5px;
+    border-bottom: solid 5px;
+    width: 600px;
+    height: auto;
+    justify-content: space-between;
     transition: transform 0.3s ease;
 }
+.service-card2{
+    background-color: var(--greencolor);
+} 
+
+.service-card4{
+    background-color: var(--graycolor);
+} 
 
 .service-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
-.search-card {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 
 .service-content h3 {
     margin: 5px 0;
 }
 
 .service-content img {
-    margin-top: 10px;
+    margin-top: 93px;
     cursor: pointer;
 }
+
+
