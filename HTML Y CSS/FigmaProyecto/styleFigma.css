@@ -81,10 +81,9 @@ a{
     filter: grayscale(1);
 }
 
-.services{
-    display: flex;
-    align-items: center;
-    gap: 40px;
+.services {
+    text-align: center;
+    padding: 40px;
 }
 
 .services h2{
@@ -98,16 +97,42 @@ a{
     width: 580px;
 }
 
-.search-card{
+.service-list {
     display: flex;
-    padding: 50px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
-.service-card h3{
-    font-size: 30px;
-    margin: 0px;
+.service-group {
+    display: flex;
+    gap: 20px;
 }
 
-.service-card img{
-    margin-top: 93px;
+.service-card {
+    background: var(--graycolor);
+    padding: 20px;
+    border-radius: 8px;
+    border: soli;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.search-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.service-content h3 {
+    margin: 5px 0;
+}
+
+.service-content img {
+    margin-top: 10px;
+    cursor: pointer;
 }
