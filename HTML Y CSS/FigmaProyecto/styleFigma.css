@@ -138,16 +138,32 @@ a{
 } 
 
 .service-card4{
-    background-color: var(--graycolor);
+    background-color: var(--darkcolor);
 } 
+
+.service-content-bg h3{
+    background-color: var(--graycolor);   
+    border-radius: 8px;
+    display: inline-block;
+    padding: 3px;
+    margin: 0px 0;
+}
+
+.service-content-green h3{
+    background-color: var(--greencolor);   
+    border-radius: 8px;
+    display: inline-block;
+    padding: 3px;
+    margin: 0px 0px;
+}
+
+.service-content{
+    display: grid;
+    grid-template-rows: auto auto;
+}
 
 .service-card:hover {
     transform: scale(1.02);
-}
-
-
-.service-content h3 {
-    margin: 5px 0;
 }
 
 .service-content img {
@@ -155,4 +171,84 @@ a{
     cursor: pointer;
 }
 
+.things-happen{
+    align-items: center;
+    margin-top: 5%;
+    justify-content: center;
+    display: flex;
+}
 
+.things-happen-container{
+    background-color: #e9e9e9;
+    display: flex;
+    margin: 20px auto;
+    padding: 0px 60px;
+    border-radius: 14px;
+}
+
+.things-happen-container div{
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    justify-content: center;
+}
+
+.things-happen-container h3{
+    margin: 0%;
+}
+
+.things-happen-container button{
+    width: 288px;
+}
+
+.Case-Services {
+    text-align: left;
+}
+
+.case-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    margin: 7.5% 0% 5% 0%;
+}
+
+.Case-Services h2{
+    margin: 0px;
+    font-size: 36px;    
+    background-color: var(--greencolor);
+    border-radius: 14px;
+}
+
+.Case-Services p{
+    width: 580px;
+    margin: 0px;
+  
+    
+}
+
+.case-studies{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    overflow: hidden;
+    flex-wrap: wrap;
+    max-width: 100%;
+    background-color: var(--darkcolor);
+    padding: clamp( 1rem, 3vw,3rem);
+    border-radius: 45px;
+    gap: clamp(1rem,2vw,2rem);
+    color: var(--graycolor);
+    font-size: clamp(px, 5vw,50px);
+    justify-content: center;
+    
+}
+
+.studies p {
+    flex: 1 1(280px, 30vw, 400px);
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    
+    
+}
