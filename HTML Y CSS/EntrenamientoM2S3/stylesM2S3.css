@@ -1,53 +1,112 @@
 body{
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 3rem;
+    padding: 0 3rem;
     box-sizing: border-box;
+    /* background-image: url("./assets/MinecraftFondo.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  */
+}
+
+.MinecraftLogo{
+    display: flex;
+    justify-content: center;
+}
+
+.MinecraftLogo img{
+    width: 50%;
+    object-fit: contain;
+    object-position: 50% 50%;
 }
 
 header{
-    background-color: #333;
-    color: aliceblue;
+    position: sticky;
+    filter: blur(0);
+    color: rgb(43, 54, 65);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     padding: 10px 20px;
+    margin-bottom: 5%;
 }
 
-nav ul{
+.menuNav ul{
     display: flex;
     list-style: none;
+    gap: 2rem;
 }
 
-nav ul li{
-    margin: 0 15px;
+.menuNav ul li a{
+    text-decoration: none;
+    color: hsl(0, 25%, 31%);
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
 }
 
-main{
-    padding: 20px;
-}
 .grid-container{
+    margin: 2rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
 }
 
-.grid-item{
-    background-color: #f4f4f4;
-    padding: 20px;
-    border: 1px solid #ccc;
-    text-align: center;
-    flex: 1;
+.uno{
+    grid-column: span 2;
+    grid-row: span 1; 
 }
+
+.tres{
+    grid-column: span 1;
+    grid-row: span 2;
+
+}
+
+.grid-item img{
+    width: 100%;
+    height: 100%;
+}
+
+.cuatro{
+    grid-column: span 2;
+    grid-row: span 2; 
+}
+
+.seis{
+    grid-column: span 2;
+    grid-row: span 1; 
+}
+
+.basic-information{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: justify;
+    gap: 1rem;
+}
+
+.basic-information{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 @media (max-width: 768px){
     .grid-container{
         grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5,1fr);
     }
 
-    nav ul{
+    .menuNav ul{
         flex-direction: column;
     }
+
+    .cuatro{
+    grid-column: span 2;
+    grid-row: span 2; 
+    order: 99;
+}
 }
 
 @media (max-width: 480px){
@@ -60,7 +119,7 @@ main{
         align-items: flex-start;
     }
 
-    nav ul{
+    .menuNav ul{
         flex-direction: column;
         align-items: flex-start;
     }
