@@ -1,88 +1,158 @@
-body{
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0 3rem;
-    box-sizing: border-box;
-    /* background-image: url("./assets/MinecraftFondo.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-attachment: fixed;  */
+:root {
+    --dark-bg: rgba(32, 33, 36, 0.9);
+    --dark-surface: rgba(41, 42, 45, 0.95);
+    --text-primary: #e8eaed;
+    --text-secondary: #9aa0a6;
+    --accent-color: #8ab4f8;
+    --hover-color: rgba(138, 180, 248, 0.12);
+    --minecraft-font: 'Minecraft', sans-serif;
 }
 
-.MinecraftLogo{
+body {
+    font-family: var(--minecraft-font);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url("./assets/FondoMinecraft.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    position: relative;
+    color: var(--text-primary);
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(32, 33, 36, 0.7) 0%,
+        rgba(32, 33, 36, 0.85) 20%,
+        rgba(32, 33, 36, 0.85) 80%,
+        rgba(32, 33, 36, 0.7) 100%
+    );
+    z-index: -1;
+}
+
+.MinecraftLogo {
     display: flex;
     justify-content: center;
+    padding: 2rem 0;
+    margin: 2rem 0;
 }
 
-.MinecraftLogo img{
+.MinecraftLogo img {
     width: 50%;
     object-fit: contain;
     object-position: 50% 50%;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
 }
 
-header{
+header {
     position: sticky;
-    filter: blur(0);
-    color: rgb(43, 54, 65);
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 10px 20px;
-    margin-bottom: 5%;
+    top: 0;
+    z-index: 100;
+    background: var(--dark-bg);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-.menuNav ul{
+.menuNav ul {
     display: flex;
     list-style: none;
     gap: 2rem;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
 }
 
-.menuNav ul li a{
+.menuNav ul li a {
     text-decoration: none;
-    color: hsl(0, 25%, 31%);
+    color: var(--text-primary);
     text-transform: uppercase;
-    letter-spacing: 0.10em;
+    letter-spacing: 0.1em;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
 }
 
-.grid-container{
+.menuNav ul li a:hover {
+    color: var(--accent-color);
+    background: var(--hover-color);
+}
+
+.grid-container {
     margin: 2rem;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 1rem;
+    position: relative;
+    z-index: 1;
 }
 
-.uno{
-    grid-column: span 2;
-    grid-row: span 1; 
+.grid-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    background: var(--dark-surface);
 }
 
-.tres{
-    grid-column: span 1;
-    grid-row: span 2;
-
-}
-
-.grid-item img{
+.grid-item img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-.cuatro{
+.grid-item img:hover {
+    transform: scale(1.05);
+}
+
+.cuatro {
     grid-column: span 2;
-    grid-row: span 2; 
-}
-
-.seis{
-    grid-column: span 2;
-    grid-row: span 1; 
-}
-
-.basic-information{
+    grid-row: span 2;
+    background: var(--dark-surface);
+    backdrop-filter: blur(5px);
+    padding: 2rem;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: space-between;
+}
+
+.cuatro img {
+    width: 40px;
+    height: 40px;
+    margin: 0.5rem;
+}
+
+.uno {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.tres {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.seis {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.basic-information {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
     text-align: justify;
-    gap: 1rem;
 }
 
 .basic-information{
@@ -91,36 +161,338 @@ header{
     object-fit: cover;
 }
 
+.basic-information h2 {
+    font-family: var(--minecraft-font);
+    color: var(--accent-color);
+    margin: 0;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 
-@media (max-width: 768px){
-    .grid-container{
+.basic-information p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.social-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    filter: brightness(0.9) contrast(1.1);
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.1);
+}
+
+.view-more {
+    font-family: var(--minecraft-font);
+    padding: 10px 25px;
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.view-more:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-2px);
+}
+
+footer {
+    background: var(--dark-surface);
+    color: var(--text-primary);
+    padding: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+    border-top: 2px solid var(--accent-color);
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    color: var(--text-secondary);
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+
+    .cuatro {
+        grid-column: span 4;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 0 1rem;
+    }
+
+    header {
+        padding: 1rem;
+    }
+
+    .menuNav ul {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .grid-container {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(5,1fr);
+        margin: 1rem;
     }
 
-    .menuNav ul{
+    .cuatro {
+        grid-column: span 2;
+        padding: 1.5rem;
+        order: 99;
+    }
+
+    .social-container {
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .social-icons {
+        gap: 2rem;
+    }
+
+    .social-icons img {
+        width: 35px;
+        height: 35px;
+    }
+
+    footer {
+        padding: 1.5rem;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0.5rem;
+    }
+
+    .menuNav ul {
         flex-direction: column;
+        align-items: center;
     }
 
-    .cuatro{
-    grid-column: span 2;
-    grid-row: span 2; 
-    order: 99;
-}
-}
-
-@media (max-width: 480px){
-    .grid-container{
+    .grid-container {
         grid-template-columns: 1fr;
+        margin: 0.5rem;
     }
 
-    header{
-        flex-direction: column;
-        align-items: flex-start;
+    .cuatro {
+        grid-column: span 1;
+        padding: 1rem;
     }
 
-    .menuNav ul{
+    .social-container {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .view-more {
+        width: auto;
+        min-width: 150px;
+    }
+
+    .MinecraftLogo img {
+        width: 100%;
+    }
+}
+
+.services-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+        "character gameplay"
+        "character quotes";
+    gap: 2rem;
+    padding: 2rem;
+    margin: 2rem;
+    background: var(--dark-surface);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.character-info {
+    grid-area: character;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    border: 2px solid var(--accent-color);
+}
+
+.favorite-character h3 {
+    font-family: var(--minecraft-font);
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.favorite-character p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.character-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.character-image img {
+    width: 80%;
+    height: auto;
+    image-rendering: pixelated;
+    filter: drop-shadow(0 0 8px rgba(0, 255, 0, 0.2));
+}
+
+.gameplay-style {
+    grid-area: gameplay;
+    text-align: center;
+    padding: 1rem;
+}
+
+.gameplay-style h2 {
+    font-family: var(--minecraft-font);
+    color: var(--accent-color);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.gameplay-style p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: justify;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.quote-box {
+    grid-area: quotes;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    border: 2px solid var(--accent-color);
+    margin-top: -1rem;
+}
+
+.quote-box blockquote {
+    font-family: var(--minecraft-font);
+    color: var(--accent-color);
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+    padding: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    border-left: 4px solid var(--accent-color);
+}
+
+.quote-box blockquote:first-child {
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-left: none;
+    background: none;
+    padding: 1rem;
+}
+
+.quote-box blockquote:last-child {
+    font-style: italic;
+}
+
+@media (max-width: 1024px) {
+    .services-section {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "gameplay"
+            "quotes"
+            "character";
+        gap: 1.5rem;
+    }
+
+    .quote-box {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-section {
+        margin: 1rem;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .gameplay-style h2 {
+        font-size: 1.5rem;
+    }
+
+    .character-image img {
+        width: 60%;
+    }
+
+    .quote-box {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .quote-box blockquote {
+        font-size: 0.9rem;
+        padding: 1rem;
+    }
+
+    .quote-box blockquote:first-child {
+        font-size: 1.1rem;
     }
 }
