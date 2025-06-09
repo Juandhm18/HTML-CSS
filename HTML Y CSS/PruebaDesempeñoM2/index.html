@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <nav>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="hamburger">☰</label>
+        <ul>
+            <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-user"></i> About me</a></li>
+            <li><a href="#proyectos"><i class="fas fa-code"></i> Projects</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>              
+        </ul>
+    </nav>
+</header>
+<main>
+    <section class="section1">
+        <div class="text">Juan Diego Hernández Martínez</div>
+        <div class="subtitle">Riwi Developer</div>
+        <div class="scroll-indicator">
+            <p>Scroll down to see my projects</p>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <section class="projects" id="proyectos">
+        <h2><i class="fas fa-code"></i> My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="./assets/portafolioProject.png" alt="Portafolio Website">
+                </div>
+                <div class="project-info">
+                    <h3>Portfolio Website</h3>
+                    <p>My first project where I built my personal portfolio using HTML and CSS</p>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="https://github.com/Juandhm18/HTML-CSS/blob/master/HTML%20Y%20CSS/ProyectoPersonal/indexP.html" target="_blank" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="./assets/figmaProject.png" alt="figma Project">
+                </div>
+                <div class="project-info">
+                    <h3>Figma Project</h3>
+                    <p>A short program where I created an inventory in Python with all the necessary functionality.</p>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="https://github.com/Juandhm18/HTML-CSS/blob/master/HTML%20Y%20CSS/FigmaProyecto/IndexFigma.html" target="_blank" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="./assets/minecraftProject.png" alt="minecraft Project">
+                </div>
+                <div class="project-info">
+                    <h3>Minecraft Personal</h3>
+                    <p>A program that represents the best of one of my favorites games, in it you can find something that describes me better</p>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="https://github.com/Juandhm18/HTML-CSS/blob/master/HTML%20Y%20CSS/EntrenamientoM2S3/index.html" target="_blank" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Juan Diego Hernández.</p>
+            <div class="social-links">
+                <a href="https://github.com/Juandhm18" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
