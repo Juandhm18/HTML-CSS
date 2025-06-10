@@ -1,8 +1,50 @@
 
-https://github.com/Juandhm18
-
-This project aims to deliver a portfolio that allows me to showcase my work to date, along with a way for you to contact me. In the index, you'll see my projects with a brief introduction about who I am. In the "About Me" tab, you can learn a little more about me, what I've studied, and what I'm passionate about. I'm constantly working on adding more knowledge to this list. Finally, I have a contact page where you can let me know any questions you may have about me or my work.
-
 As for the design of the page, I was inspired by a landscape that somewhat resembles cyberpunk, so the design tried to be that way.
 
-This project was completed by Juan Diego Hernandez Martinez, clan Linus, my email is juandhm20qgmail.com and my ID is 1192766051
+# Personal Portfolio Website
+
+## Developer Information
+- Name: [Juan]
+- Clan: [linus]
+- Email: [juandhm20@gmail.com]
+- ID: [1192766051]
+
+## Project Description
+This is a personal portfolio website showcasing my skills, projects, and providing a way for visitors to contact me. The website is built with HTML5 and CSS, featuring a responsive design that works across all devices.
+
+## Features
+- Semantic HTML5 structure
+- Responsive design (Desktop, Tablet, Mobile)
+- Modern CSS with Flexbox and Grid
+- Interactive elements and smooth transitions
+- Portfolio showcase
+- Contact form
+
+## Project Structure
+```
+/
+├── index.html          # Main page
+├── about.html
+├── contact.html
+├── styles/
+│   └── styles.css      # Main stylesheet
+├── images/            # Image assets
+└── README.md          # Project documentation
+```
+
+## Setup Instructions
+1. Clone this repository
+2. Open `index.html` in your web browser
+3. No additional setup required --- this is a static website!
+
+## Technologies Used
+- HTML
+- CSS (Flexbox & Grid)
+- Google Fonts
+- Custom animations and transitions
+
+## Responsive Design
+The website is fully responsive with breakpoints at:
+- Desktop: 1024px and above
+- Tablet: 768px to 1023px
+- Mobile: 480px and below 
