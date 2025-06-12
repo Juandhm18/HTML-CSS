@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="./media/icons/favicon.svg" rel="icon" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Mercado Libre</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="top">
+          <a href="./index.html">
+            <img src="./media/icons/logo-meli.svg" alt="Mercado Libre Logo" />
+          </a>
+          <div class="search-bar">
+            <form class="searcher" action="">
+              <input type="text" placeholder="Buscar productos, marcas y más..."/>
+              <div class="search-div">
+                <div class="searcher-separator"></div>
+                <button class="search-button" type="submit">
+                  <img
+                    width="20px"
+                    src="./media/icons/magnifying-glass.svg"
+                    alt=""/>
+                </button>
+              </div>
+            </form>
+          </div>
+            <a href="" class="envio-gratis">
+                <img src="https://http2.mlstatic.com/D_NQ_614112-MLA83386949070_042025-OO.webp" alt="ENVIO GRATIS PRIMERA COMPRA" width="350rem">
+            </a>
+        </div>
+        <div class="navigation">
+          <nav class="page-nav">
+            <ul>
+              <li class="address">
+                <img
+                  width="20px"
+                  src="./media/icons/map-pin.svg"
+                  alt="Map icon"
+                />
+                <a href="#">
+                    <p>Ingresa tu ubicacion</p>
+                </a>
+                
+              </li>
+              <li><a class="categories-nav" href="#"><div>Categorías</div>
+                  <img width="12px" src="./media/icons/chevron-down.svg" alt="chevron down"/></a>
+              </li>
+              <li><a href="#">Ofertas</a></li>
+              <li><a href="#">Cupones</a></li>
+              <li>
+                <a href="#">Supermercado</a>
+              </li>
+              <li>
+                <a href="#">Moda</a>
+              </li>
+              <li>
+                <a href="#">Vender</a>
+              </li>
+              <li>
+                <a href="#">Ayuda / PQR</a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="account-nav">
+            <ul>
+              <li>
+                <a href="#">Crea tu cuenta</a>
+              </li>
+              <li>
+                <a href="#">Ingresa</a>
+              </li>
+              <li>
+                <a href="#">Mis compras</a>
+              </li>
+            </ul>
+            <a href="#">
+              <img
+                width="20px"
+                src="./media/icons/cart-meli.svg"
+                alt="Cart icon"
+              />
+            </a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+        <section class="banner" id="Banner">
+            <div class="banner-image">
+            <!-- <img src="./media/images/banner-1.png" alt="Banner" /> -->
+            <img decoding="async" src="https://http2.mlstatic.com/D_NQ_622789-MLA85768983829_062025-OO.webp" alt="Banner">
+            <!-- <form action="">
+                <input type="radio" name="banner-1" id="banner-1" />
+                <input type="radio" name="banner-1" id="banner-2" checked />
+                <input type="radio" name="banner-1" id="banner-3" />
+                <input type="radio" name="banner-1" id="banner-4" />
+                <input type="radio" name="banner-1" id="banner-5" />
+                <input type="radio" name="banner-1" id="banner-6" />
+            </form> -->
+            </div>
+        </section>
+        <div class="gradient"></div>
+
+      <section class="payments" id="Payments">
+        <div class="payments-container">
+          <div class="payments-methods">
+            <div class="payment-card">
+              <div class="payment-icon">
+                <img src="./media/icons/credit-card.svg" alt="" />
+              </div>
+              <div class="payment-info">
+                <span>Hasta 48 cuotas</span>
+                <a href="">Ver más</a>
+              </div>
+            </div>
+            <div class="payment-card">
+              <div class="payment-icon">
+                <img src="./media/icons/bank.svg" alt="" />
+              </div>
+              <div class="payment-info">
+                <span>Transferencia desde tu banco</span>
+                <a href="">Ver más</a>
+              </div>
+            </div>
+            <div class="payment-card">
+              <div class="payment-icon">
+                <img src="./media/icons/cash.svg" alt="" />
+              </div>
+              <div class="payment-info">
+                <span>Paga en efectivo</span>
+                <a href="">Ver más</a>
+              </div>
+            </div>
+            <div class="payment-card-more">
+              <div class="payment-icon">
+                <img src="./media/icons/plus-rounded.svg" alt="" />
+              </div>
+              <div class="payment-info">
+                <span>Más medios de pago</span>
+                <a href="">Ver más</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="offers" id="Offers">
+        <div class="offers-container">
+          <div class="offers-title">
+            <h2>Ofertas</h2>
+            <a href="">Ver todas</a>
+          </div>
+          <div class="offers-cards">
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="./media/images/offer-1.png" alt="" />
+              </div>
+              <div class="offer-info">
+                <div class="offer-price">
+                  <span>$ 210.900</span>
+                  <p>32% OFF</p>
+                </div>
+                <div class="offer-delivery">
+                  <span>Envío gratis</span>
+                </div>
+              </div>
+            </div>
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="./media/images/offer-2.png" alt="" />
+              </div>
+              <div class="offer-info">
+                <div class="offer-price">
+                  <span>$ 74.990</span>
+                  <p>25% OFF</p>
+                </div>
+                <div class="offer-delivery">
+                  <span>Envío gratis</span>
+                  <img src="./media/icons/full-icon.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="./media/images/offer-3.png" alt="" />
+              </div>
+              <div class="offer-info">
+                <div class="offer-price">
+                  <span>$ 134.950</span>
+                  <p>50% OFF</p>
+                </div>
+                <div class="offer-delivery">
+                  <span>Envío gratis</span>
+                </div>
+              </div>
+            </div>
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="./media/images/offer-4.png" alt="" />
+              </div>
+              <div class="offer-info">
+                <div class="offer-price">
+                  <span>$ 149.900</span>
+                  <p>30% OFF</p>
+                </div>
+                <div class="offer-delivery">
+                  <span>Envío gratis</span>
+                </div>
+              </div>
+            </div>
+            <div class="offer-card">
+              <div class="offer-image">
+                <img src="./media/images/offer-5.png" alt="" />
+              </div>
+              <div class="offer-info">
+                <div class="offer-price">
+                  <span>$ 69.990</span>
+                  <p>17% OFF</p>
+                </div>
+                <div class="offer-delivery">
+                  <img src="./media/icons/full-icon.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="subscription" id="Subscription">
+        <div class="subscription-container">
+          <div class="subscription-header">
+            <div class="subscription-title">Suscríbete al nivel 6</div>
+            <div class="subscription-prices">
+              <div class="no-discount-price">$ 50.690</div>
+              <div class="price">
+                <span>$ 17.899</span>
+                <p>/mes</p>
+              </div>
+            </div>
+          </div>
+          <div class="subscription-details">
+            <div class="subscription-description">
+              Consigue los mejores beneficios en Mercado Libre
+            </div>
+            <div class="subscription-cards">
+              <div>
+                <div class="subs-card-icon">
+                  <img src="./media/icons/diney-plus.svg" alt="" />
+                </div>
+                <p>Disney+ sin cargo</p>
+              </div>
+              <div>
+                <div class="subs-card-icon">
+                  <img src="./media/icons/star-plus.svg" alt="" />
+                </div>
+                <p>Star+ sin cargo</p>
+              </div>
+              <div>
+                <div class="subs-card-icon">
+                  <img src="./media/images/truck-meli-icon.png" alt="" />
+                </div>
+                <p>
+                  Envíos gratis y rápidos desde $ 90.000 y 40% OFF en envíos de
+                  menos de $ 90.000
+                </p>
+              </div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <div class="subscription-button">
+            <button>Suscríbete</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="benefits" id="Benefits">
+        <div class="benefits-container">
+          <div class="benefits-title">
+            <h2>Beneficios de Mercado Puntos</h2>
+            <a href="">Ver todos los beneficios</a>
+          </div>
+          <div class="benefits-cards">
+            <div class="benefit-card">
+              <div class="card-bg-shadow-1">
+                <div class="card-info">
+                  <img src="./media/images/benefit-brand-1.png" alt="" />
+                  <div class="benefit-info">
+                    <spam class="benefit-description"
+                      >Sin cargo con el nivel 6</spam
+                    >
+                    <p class="benefit-brand">Disney+ y Star+</p>
+                  </div>
+                </div>
+              </div>
+              <img
+                class="card-bg"
+                src="./media/images/benefit-bg-1.png"
+                alt=""
+              />
+            </div>
+            <div class="benefit-card">
+              <div class="card-bg-shadow-2">
+                <div class="card-info">
+                  <img src="./media/images/benefit-brand-2.png" alt="" />
+                  <div>
+                    <p class="benefit-time">7 DÍAS GRATIS</p>
+                    <spam class="benefit-description">Hasta 50% OFF</spam>
+                    <p class="benefit-brand">HBO Max</p>
+                  </div>
+                </div>
+              </div>
+              <img
+                class="card-bg"
+                src="./media/images/benefit-bg-2.png"
+                alt=""
+              />
+            </div>
+            <div class="benefit-card">
+              <div class="card-bg-shadow-3">
+                <div class="card-info">
+                  <img src="./media/images/benefit-brand-3.png" alt="" />
+                  <div>
+                    <p class="benefit-time">7 DÍAS GRATIS</p>
+                    <spam class="benefit-description">Hasta 50% OFF</spam>
+                    <p class="benefit-brand">Paramount+</p>
+                  </div>
+                </div>
+              </div>
+              <img
+                class="card-bg"
+                src="./media/images/benefit-bg-3.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="discover" id="Discover">
+        <div class="discover-container">
+          <div class="discover-title">
+            <h2>Descubre</h2>
+          </div>
+          <div class="discover-cards">
+            <div class="discover-card">
+              <div class="card-info">
+                <p>RENUEVA TUS ESPACIOS</p>
+                <span>
+                  HOGAR Y MUEBLES<br />
+                  HASTA 50% OFF
+                </span>
+                <button>Ver más</button>
+              </div>
+              <img src="./media/images/discover-1.png" alt="" />
+            </div>
+            <div class="discover-card">
+              <div class="card-info">
+                <p>SUSCRÍBETE AL NIVEL 6</p>
+                <span>
+                  POR SOLO<br />
+                  $17.899 CADA MES
+                </span>
+                <button>Suscribirme</button>
+              </div>
+              <img src="./media/images/discover-2.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stores" id="Stores">
+        <div class="stores-container">
+          <div class="stores-title">
+            <h2>Las mejores tiendas te esperan</h2>
+            <a href="">Ver tiendas</a>
+          </div>
+          <div class="stores-cards">
+            <div class="store-card">
+              <div class="card-header">
+                <div class="store-logo">
+                  <img src="./media/images/store-logo-1.png" alt="" />
+                </div>
+
+                <img
+                  class="store-bg"
+                  src="./media/images/store-bg-1.png"
+                  alt=""
+                />
+              </div>
+              <div class="store-info">
+                <span class="store-name">Lego</span>
+                <div class="products">
+                  <a href=""
+                    ><img src="./media/images/store-1-product-1.png" alt=""
+                  /></a>
+                  <a href=""
+                    ><img src="./media/images/store-1-product-2.png" alt=""
+                  /></a>
+                  <a href=""
+                    ><img src="./media/images/store-1-product-3.png" alt=""
+                  /></a>
+                </div>
+                <a class="see-store" href=""> Ver tienda </a>
+              </div>
+            </div>
+            <div class="store-card">
+              <div class="card-header">
+                <div class="store-logo">
+                  <img src="./media/images/store-logo-2.png" alt="" />
+                </div>
+
+                <img
+                  class="store-bg"
+                  src="./media/images/store-bg-2.png"
+                  alt=""
+                />
+              </div>
+              <div class="store-info">
+                <span class="store-name">Xiami</span>
+                <div class="products">
+                  <a href=""
+                    ><img src="./media/images/store-2-product-1.png" alt=""
+                  /></a>
+                  <a href=""
+                    ><img src="./media/images/store-2-product-2.png" alt=""
+                  /></a>
+                  <a href=""
+                    ><img src="./media/images/store-2-product-3.png" alt=""
+                  /></a>
+                </div>
+                <a class="see-store" href=""> Ver tienda </a>
+              </div>
+            </div>
+            <div class="store-card">
+              <div class="card-header">
+                <div class="store-logo">
+                  <img src="./media/images/store-logo-3.png" alt="" />
+                </div>
+
+                <img
+                  class="store-bg"
+                  src="./media/images/store-bg-3.png"
+                  alt=""
+                />
+              </div>
+              <div class="store-info">
+                <span class="store-name">Oster</span>
+                <div class="products">
+                  <a href=""
+                    ><img src="./media/images/store-3-product-1.png" alt=""
+                  /></a>
+                  <a href=""
+                    ><img src="./media/images/store-3-product-2.png" alt=""
+                  /></a>
+                  <a href=""
+                    ><img src="./media/images/store-3-product-3.png" alt=""
+                  /></a>
+                </div>
+                <a class="see-store" href=""> Ver tienda </a>
+              </div>
+            </div>
+            <div class="store-card">
+              <div class="card-header">
+                <div class="store-logo">
+                  <img src="./media/images/store-logo-4.png" alt="" />
+                </div>
+
+                <img
+                  class="store-bg"
+                  src="./media/images/store-bg-4.png"
+                  alt=""
+                />
+              </div>
+              <div class="store-info">
+                <span class="store-name">Nikon</span>
+                <div class="products">
+                  <a href=""
+                    ><img src="./media/images/store-4-product-1.png" alt=""
+                  /></a>
+                  <a href=""
+                    ><img src="./media/images/store-4-product-2.png" alt=""
+                  /></a>
+                  <a href=""
+                    ><img src="./media/images/store-4-product-3.png" alt=""
+                  /></a>
+                </div>
+                <a class="see-store" href=""> Ver tienda </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="collections" id="Collections">
+        <div class="collections-container">
+          <div class="collections-title">
+            <h2>Colecciones:</h2>
+            <span>Supermercado</span>
+            <a href="/">
+              <img src="./media/icons/chevron-down-blue.svg" alt="" />
+            </a>
+          </div>
+          <div class="collections-cards">
+            <div class="collections-main-card">
+              <img src="./media/images/collections-main-card.png" alt="" />
+              <div class="card-info">
+                <p>Descubre</p>
+                <span>Supermercado</span>
+              </div>
+            </div>
+            <div class="collections-secondary-cards">
+              <div><img src="./media/images/collections-1.png" alt="" /></div>
+              <div><img src="./media/images/collections-2.png" alt="" /></div>
+              <div><img src="./media/images/collections-3.png" alt="" /></div>
+              <div><img src="./media/images/collections-4.png" alt="" /></div>
+              <div><img src="./media/images/collections-5.png" alt="" /></div>
+              <div><img src="./media/images/collections-6.png" alt="" /></div>
+              <div><img src="./media/images/collections-7.png" alt="" /></div>
+              <div><img src="./media/images/collections-8.png" alt="" /></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="categories" id="categories">
+        <div class="categories-container">
+          <div class="categories-title">
+            <h2>Categorías populares</h2>
+          </div>
+          <div class="categories-cards">
+            <div>
+              <img src="./media/icons/categories-1.svg" alt="" />
+              <span>Carros, Motos y Otros</span>
+            </div>
+            <div>
+              <img src="./media/icons/categories-2.svg" alt="" />
+              <span>Computación</span>
+            </div>
+            <div>
+              <img src="./media/icons/categories-3.svg" alt="" />
+              <span>Ropa y Accesorios</span>
+            </div>
+            <div>
+              <img src="./media/icons/categories-4.svg" alt="" />
+              <span>Hogar y Muebles</span>
+            </div>
+            <div>
+              <img src="./media/icons/categories-5.svg" alt="" />
+              <span
+                >Accesorios <br />
+                para Vehículos</span
+              >
+            </div>
+            <div>
+              <img src="./media/icons/categories-6.svg" alt="" />
+              <span>Electrodomésticos</span>
+            </div>
+            <div>
+              <img src="./media/icons/categories-7.svg" alt="" />
+              <span>Cámaras y Accesorios</span>
+            </div>
+            <div>
+              <img src="./media/icons/categories-8.svg" alt="" />
+              <span>Celulares y Teléfonos</span>
+            </div>
+            <div>
+              <img src="./media/icons/categories-9.svg" alt="" />
+              <span>Belleza y Cuidado Personal</span>
+            </div>
+            <div>
+              <img src="./media/icons/categories-10.svg" alt="" />
+              <span>Deportes y Fitness</span>
+            </div>
+            <div>
+              <img src="./media/icons/categories-11.svg" alt="" />
+              <span
+                >Electrónica, Audio <br />
+                y Video</span
+              >
+            </div>
+            <div>
+              <img src="./media/icons/categories-12.svg" alt="" />
+              <span>Consolas y Videojuegos</span>
+            </div>
+            <div>
+              <img src="./media/icons/categories-13.svg" alt="" />
+              <span>Juegos y Juguetes</span>
+            </div>
+            <div>
+              <img src="./media/icons/categories-14.svg" alt="" />
+              <span>Herramientas</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="features">
+        <div class="features-container">
+          <div class="feature">
+            <div class="feature-icon">
+              <img src="./media/icons/footer-payment.svg" alt="" />
+            </div>
+            <span>Paga con tarjeta o en efectivo</span>
+            <p>
+              Con Mercado Pago, paga en cuotas y <br />
+              aprovecha la comodidad de financiación que <br />
+              te da tu banco, o hazlo con efectivo en <br />
+              puntos de pago. ¡Y siempre es seguro!
+            </p>
+            <a href="">Cómo pagar con Mercado Pago</a>
+          </div>
+
+          <div class="separator-container">
+            <div class="separator"></div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">
+              <img src="./media/icons/footer-shipping.svg" alt="" />
+            </div>
+            <span>Envío gratis desde $ 90.000</span>
+            <p>
+              Con solo estar registrado en Mercado <br />
+              Libre, tienes envíos gratis en miles de <br />
+              productos seleccionados.
+            </p>
+            <a href="">Conoce más sobre este beneficio</a>
+          </div>
+          <div class="separator-container">
+            <div class="separator"></div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">
+              <img src="./media/icons/footer-protected.svg" alt="" />
+            </div>
+            <span>Seguridad, de principio a fin</span>
+            <p>
+              ¿No te gusta? ¡Devuélvelo! En Mercado <br />
+              Libre, no hay nada que no puedas hacer, <br />
+              porque estás siempre protegido.
+            </p>
+            <a href="">Cómo te protegemos</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-info">
+        <div class="nav">
+          <div class="links">
+            <a href="">Trabaja con nosotros</a>
+            <a href="">Términos y condiciones</a>
+            <a href="">Cómo cuidamos tu privacidad</a>
+            <a href="">Accesibilidad</a>
+            <a href="">Ayuda / PQR</a>
+            <a href="">www.sic.gov.co</a>
+          </div>
+          <p>Copyright © 1999-2023 MercadoLibre Colombia LTDA.</p>
+          <p>Carrera 17 Numero 93 - 09 Piso 3, Bogotá D.C., Colombia</p>
+        </div>
+        <div class="regulators">
+          <img src="./media/images/footer-sic.png" alt="" />
+          <img src="./media/images/footer-pum.png" alt="" />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
