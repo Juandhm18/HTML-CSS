@@ -23,13 +23,12 @@ async function getWeather() {
     const data = await response.json();
     const { name, main, weather } = data;
 
+    console.log(data)
     const sunrisetime = data.sys.sunrise
     const sunsettime = data.sys.sunset
 
     var datesunrise = new Date(sunrisetime * 1000);
     var datesunset = new Date(sunsettime * 1000);
-
-    console.log(sunrise)
 
     resultDiv.innerHTML = `
       <p><strong>Ciudad:</strong> ${name}</p>
