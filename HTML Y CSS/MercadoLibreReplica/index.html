@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mercado Libre - La plataforma de comercio electrónico líder en Latinoamérica">
+    <meta name="keywords" content="mercado libre, compras online, ventas online, ecommerce">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="./media/icons/favicon.svg" rel="icon" type="image/x-icon" />
@@ -11,102 +13,167 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
-    <title>Mercado Libre</title>
-  </head>
-  <body>
+    <title>Mercado Libre - Envíos Gratis en el día</title>
+</head>
+<body>
     <header>
       <div class="container">
         <div class="top">
-          <a href="./index.html">
-            <img src="./media/icons/logo-meli.svg" alt="Mercado Libre Logo" />
+          <a href="./index.html" aria-label="Ir a inicio">
+            <img src="./media/icons/logo-meli.svg" alt="Mercado Libre Logo" width="134" height="34" />
           </a>
           <div class="search-bar">
-            <form class="searcher" action="">
-              <input type="text" placeholder="Buscar productos, marcas y más..."/>
+            <form class="searcher" action="/search" method="GET" role="search">
+              <input 
+                type="text" 
+                name="q"
+                placeholder="Buscar productos, marcas y más..."
+                aria-label="Buscar productos"
+              />
               <div class="search-div">
                 <div class="searcher-separator"></div>
-                <button class="search-button" type="submit">
+                <button class="search-button" type="submit" aria-label="Buscar">
                   <img
-                    width="20px"
+                    width="20"
+                    height="20"
                     src="./media/icons/magnifying-glass.svg"
-                    alt=""/>
+                    alt="Buscar"
+                  />
                 </button>
               </div>
             </form>
           </div>
-            <a href="" class="envio-gratis">
-                <img src="https://http2.mlstatic.com/D_NQ_614112-MLA83386949070_042025-OO.webp" alt="ENVIO GRATIS PRIMERA COMPRA" width="350rem">
-            </a>
+          <a href="" class="envio-gratis" aria-label="Envío gratis en tu primera compra">
+            <img 
+              src="https://http2.mlstatic.com/D_NQ_614112-MLA83386949070_042025-OO.webp" 
+              alt="ENVIO GRATIS PRIMERA COMPRA" 
+              width="350"
+              loading="lazy"
+            >
+          </a>
         </div>
-        <div class="navigation">
-          <nav class="page-nav">
-            <ul>
-              <li class="address">
-                <img
-                  width="20px"
-                  src="./media/icons/map-pin.svg"
-                  alt="Map icon"
-                />
-                <a href="#">
-                    <p>Ingresa tu ubicacion</p>
+        <nav class="navigation" aria-label="Navegación principal">
+          <div class="nav-left">
+            <div class="address">
+              <img
+                width="20"
+                height="20"
+                src="./media/icons/map-pin.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              <div class="address-content">
+                <span class="address-label">Enviar a</span>
+                <a href="#" class="address-text">Ingresa tu ubicación</a>
+              </div>
+            </div>
+            <ul class="page-nav">
+              <li>
+                <a class="categories-nav" href="#" aria-expanded="false">
+                  <div>Categorías</div>
+                  <img width="12" height="12" src="./media/icons/chevron-down.svg" alt="" aria-hidden="true"/>
                 </a>
-                
-              </li>
-              <li><a class="categories-nav" href="#"><div>Categorías</div>
-                  <img width="12px" src="./media/icons/chevron-down.svg" alt="chevron down"/></a>
               </li>
               <li><a href="#">Ofertas</a></li>
-              <li><a href="#">Cupones</a></li>
-              <li>
-                <a href="#">Supermercado</a>
-              </li>
-              <li>
-                <a href="#">Moda</a>
-              </li>
-              <li>
-                <a href="#">Vender</a>
-              </li>
-              <li>
-                <a href="#">Ayuda / PQR</a>
-              </li>
+              <li><a href="#">Historial</a></li>
+              <li><a href="#">Supermercado</a></li>
+              <li><a href="#">Moda</a></li>
+              <li><a href="#">Vender</a></li>
+              <li><a href="#">Ayuda</a></li>
             </ul>
-          </nav>
-          <nav class="account-nav">
-            <ul>
-              <li>
-                <a href="#">Crea tu cuenta</a>
-              </li>
-              <li>
-                <a href="#">Ingresa</a>
-              </li>
-              <li>
-                <a href="#">Mis compras</a>
-              </li>
-            </ul>
-            <a href="#">
-              <img
-                width="20px"
-                src="./media/icons/cart-meli.svg"
-                alt="Cart icon"
-              />
-            </a>
-          </nav>
-        </div>
+          </div>
+          <div class="nav-right">
+            <nav class="account-nav" aria-label="Navegación de cuenta">
+              <ul>
+                <li><a href="#">Crea tu cuenta</a></li>
+                <li><a href="#">Ingresa</a></li>
+                <li><a href="#">Mis compras</a></li>
+              </ul>
+              <a href="#" class="cart-link" aria-label="Carrito de compras">
+                <img
+                  width="20"
+                  height="20"
+                  src="./media/icons/cart-meli.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <span class="cart-count">0</span>
+              </a>
+            </nav>
+          </div>
+        </nav>
       </div>
     </header>
     <main>
         <section class="banner" id="Banner">
-            <div class="banner-image">
-            <!-- <img src="./media/images/banner-1.png" alt="Banner" /> -->
-            <img decoding="async" src="https://http2.mlstatic.com/D_NQ_622789-MLA85768983829_062025-OO.webp" alt="Banner">
-            <!-- <form action="">
-                <input type="radio" name="banner-1" id="banner-1" />
-                <input type="radio" name="banner-1" id="banner-2" checked />
-                <input type="radio" name="banner-1" id="banner-3" />
-                <input type="radio" name="banner-1" id="banner-4" />
-                <input type="radio" name="banner-1" id="banner-5" />
-                <input type="radio" name="banner-1" id="banner-6" />
-            </form> -->
+            <div class="banner-carousel">
+                <div class="carousel-track">
+                    <div class="carousel-slide">
+                        <img src="https://http2.mlstatic.com/D_NQ_954825-MLA75004901009_032024-OO.webp" alt="Banner 1" class="carousel-img" />
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://http2.mlstatic.com/D_NQ_614112-MLA83386949070_042025-OO.webp" alt="Banner 2" class="carousel-img" />
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://http2.mlstatic.com/D_NQ_622789-MLA85768983829_062025-OO.webp" alt="Banner 3" class="carousel-img" />
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://http2.mlstatic.com/D_NQ_954825-MLA75004901009_032024-OO.webp" alt="Banner 4" class="carousel-img" />
+                    </div>
+                </div>
+                <button class="carousel-arrow left" aria-label="Anterior">&#10094;</button>
+                <button class="carousel-arrow right" aria-label="Siguiente">&#10095;</button>
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <div class="carousel-gradient"></div>
+            </div>
+        </section>
+        <section class="benefits-cards">
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png" alt="Cuenta" />
+                </div>
+                <h3>Ingresa a tu cuenta</h3>
+                <p>Disfruta de ofertas y compra sin límites.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Ubicación" />
+                </div>
+                <h3>Ingresa tu ubicación</h3>
+                <p>Consulta costos y tiempos de entrega.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/929/929426.png" alt="Pago" />
+                </div>
+                <h3>Medios de pago</h3>
+                <p>Paga tus compras de forma rápida y segura.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Precios bajos" />
+                </div>
+                <h3>Menos de $40.000</h3>
+                <p>Descubre productos con precios bajos.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1170/1170627.png" alt="Más vendidos" />
+                </div>
+                <h3>Más vendidos</h3>
+                <p>Explora los productos que son tendencia.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Compra protegida" />
+                </div>
+                <h3>Compra protegida</h3>
+                <p>Puedes devolver tu compra gratis.</p>
             </div>
         </section>
         <div class="gradient"></div>

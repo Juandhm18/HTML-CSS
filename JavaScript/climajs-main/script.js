@@ -1,15 +1,21 @@
 const apiKey = 'fa2d9f3da36ac1a7b56d308c89903fab';
 
+function checkEnter(event) {
+    if (event.key === "Enter") {
+        getWeather();
+    }
+}
+
 async function getWeather() {
   
   const resultDiv = document.getElementById('result');
   const input = document.getElementById('samuel');
   let city = input.value;
 
-  // if (!city) {
-  //   resultDiv.innerText = 'Por favor ingresa una ciudad.';
-  //   return;
-  // }
+  if (!city) {
+    resultDiv.innerText = 'Por favor ingresa una ciudad.';
+    return;
+  }
 
   try {
     resultDiv.innerText = 'Buscando...';
@@ -18,7 +24,7 @@ async function getWeather() {
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=es`
     );
 
-    // if (!response.ok) throw new Error('Ciudad no encontrada.');
+    if (!response.ok) throw new Error('Ciudad no encontrada.');
 
     const data = await response.json();
     const { name, main, weather } = data;
@@ -27,15 +33,15 @@ async function getWeather() {
     const sunrisetime = data.sys.sunrise
     const sunsettime = data.sys.sunset
 
-    var datesunrise = new Date(sunrisetime * 1000);
-    var datesunset = new Date(sunsettime * 1000);
+    var datesunrise = new Date(sunrisetime * 1000).toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
+    var datesunset = new Date(sunsettime * 1000).toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
 
     resultDiv.innerHTML = `
       <p><strong>Ciudad:</strong> ${name}</p>
       <p><strong>Temperatura:</strong> ${main.temp}°C</p>
       <p><strong>Clima:</strong> ${weather[0].description}</p>
-      <p><strong>Amanece a las:</strong> ${datesunrise}</p>
-      <p><strong>Anochece a las:</strong> ${datesunset}</p>
+      <p><strong>Amanece a las:</strong> ${datesunrise} AM</p>
+      <p><strong>Anochece a las:</strong> ${datesunset} PM</p>
     `;
   } catch (error) {
     console.log(error)
