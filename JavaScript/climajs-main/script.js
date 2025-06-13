@@ -38,11 +38,21 @@ async function getWeather() {
 
     resultDiv.innerHTML = `
       <p><strong>Ciudad:</strong> ${name}</p>
+      <img src="https://openweathermap.org/img/wn/${weather[0].icon}@2x.png" alt="icon">
       <p><strong>Temperatura:</strong> ${main.temp}°C</p>
-      <p><strong>Clima:</strong> ${weather[0].description}</p>
+      <p id="clima"><strong>Clima:</strong> ${weather[0].description}</p>
       <p><strong>Amanece a las:</strong> ${datesunrise} AM</p>
       <p><strong>Anochece a las:</strong> ${datesunset} PM</p>
     `;
+
+    // clima = weather[0].description;
+    // if (clima == 'bruma'){
+    //   console.log(clima)
+    //   document.body.style.backgroundColor = "rgb(68, 68, 156)";
+    // }
+    // if (clima == "soleado"){
+    //   document.getElementById("clima").style.backgroundColor = "#FF0000";
+    // }
   } catch (error) {
     console.log(error)
     resultDiv.innerText = error.message;

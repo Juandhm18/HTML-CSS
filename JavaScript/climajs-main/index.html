@@ -7,15 +7,23 @@
     <link rel="stylesheet" href="./climajs.css">
   </head>
   <body>
-    <h1>weather</h1>
-    <main>
-      <label for="text">Enter the city:</label>
-      <input type="text" placeholder="City" id="samuel" onkeydown="checkEnter(event)">
-      <button type="submit" onclick="getWeather()">Search</button>
-      <section>
-        <div id="result"></div>
-      </section>
-    </main>
-  </body>
+    <section class="weather-content">
+        <h1>Buscador del clima</h1>
+        <section>
+        <div class="consult">
+            <section>
+              <div id="result"></div>
+            </section> 
+            <!-- <h5>Clima en Bogota</h5>
+            <img src="" alt="">
+            <h2>28°C</h2>
+            <p>Max: 29°C</p>
+            <p>Min: 27°C</p> -->
+            <input type="text" onkeydown="checkEnter(event)" id="samuel" placeholder="Write your city...">
+            <button type="submit" onclick="getWeather()">Search</button>
+        </div>
+        </section>
+    </section>
+</body>
 </html>
 <script src="./script.js"></script>
