@@ -1,35 +1,39 @@
 # Javascript---Best-Element
-Interacción con el DOM usando JavaScript
+DOM Interaction using JavaScript
 
-## Descripción
+## Description
 
-Este proyecto contiene ejemplos y ejercicios prácticos para aprender a manipular el DOM utilizando JavaScript. Aquí encontrarás scripts y recursos que te ayudarán a comprender cómo interactuar dinámicamente con los elementos de una página web.
+This project contains examples and practical exercises to learn how to manipulate the DOM using JavaScript. Here you will find scripts and resources to help you understand how to dynamically interact with elements on a web page.
 
-## Estructura del proyecto
+## Project Structure
 
-- **index.html**: Archivo principal HTML donde se muestran los elementos a manipular.
-- **styles.css**: Hojas de estilo para dar formato a la página.
-- **scripts.js**: Código JavaScript encargado de la interacción con el DOM.
+- **index.html**: Main HTML file where the elements to be manipulated are displayed.
+- **styles.css**: Stylesheets to format the page.
+- **scripts.js**: JavaScript code responsible for DOM interaction.
 
-## Funcionalidades principales
+## Main Features
 
-- Selección y modificación de elementos del DOM.
-- Manejo de eventos (click, input, etc.).
-- Creación y eliminación dinámica de elementos.
-- Ejemplos prácticos de manipulación de clases y atributos.
+- Selecting and modifying DOM elements.
+- Event handling (click, input, etc.).
+- Dynamic creation and removal of elements.
+- Practical examples of manipulating classes and attributes.
 
-## Cómo usar
+## How to Use
 
-1. Clona este repositorio o descarga los archivos.
-2. Abre `index.html` en tu navegador.
-3. Explora y modifica el código en `scripts.js` para experimentar con el DOM.
+1. Clone this repository or download the files.
+2. Open `index.html` in your browser.
+3. Explore and modify the code in `scripts.js` to experiment with the DOM.
 
-## Requisitos
+## Requirements
 
-- Navegador web moderno.
-- Conocimientos básicos de HTML, CSS y JavaScript.
+- Modern web browser.
+- Basic knowledge of HTML, CSS, and JavaScript.
 
-## Autores
+## Authors
 
-- Juan Diego Hernandez Martinez.
-- Kevin Esneider Londoño Zuluaga.
+- Escudero Rúa Jeferson (lider)
+- Franco Falla Michael 
+- Hernández Martínez Juan Diego 
+- Londoño Zuluaga Kevin Esneider 
+- Orozco Osorio Esteban 
+- Botero Ramírez Santiago 
