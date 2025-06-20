@@ -81,6 +81,7 @@ document.getElementById('colorBtn').addEventListener('click', function() {
 });
 
 // Ticket 6: Botón con ciclo (mostrar días de la semana)
+
 const days = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
 function renderDaysList() {
     const ul = document.getElementById('daysList');
