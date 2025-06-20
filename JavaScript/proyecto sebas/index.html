@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons Best Element</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Botones Interactivos</h1>
+    <div class="grid">
+        <div class="card">
+            <div class="button-group">
+                <span>Ingrese la hora en formato militar (0-23):</span>
+                <input type="number" id="hourInput" min="0" max="23" placeholder="Hora (0-23)">
+                <button id="greetBtn">Saludar según hora</button>
+                <span id="greetMsg"></span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="button-group">
+                <span>Presione para aumentar el contador y ver el valor actualizado.</span>
+                <button id="counterBtn">Contador</button>
+                <span id="counterValue">0</span>
+                <button id="resetCounterBtn" >Refresh</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="button-group">
+                <span>Obtenga un mensaje motivacional aleatorio.</span>
+                <button id="randomBtn">Mensaje Aleatorio</button>
+                <span id="randomMsg"></span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="button-group">
+                <span>Valide si el campo de texto tiene contenido.</span>
+                <input type="text" id="inputField" placeholder="Escribe algo...">
+                <button id="validateBtn">Validar Entrada</button>
+                <span id="validateMsg"></span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="button-group">
+                <span>Cambie el color de fondo de la página con cada clic.</span>
+                <button id="colorBtn">Cambiar Color</button>
+                <span id="colorMsg"></span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="button-group">
+                <span>Muestre la lista de los días de la semana en pantalla.</span>
+                <button id="listBtn">Mostrar Días</button>
+                <ul id="daysList"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
