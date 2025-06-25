@@ -14,7 +14,7 @@ const loadingOldMessagesDiv = document.getElementById('loading-old-messages');
 
 // === LECCIÓN 3: PROTOTIPOS, CLASES Y MODULARIDAD ===
 // 1. Crea una clase ChatMessage que modele un mensaje
-class ChatMessage {
+class ChatMessage { 
     constructor(author, content, timestamp = new Date()) {
         this.author = author;     // Autor del mensaje (ej: 'user', 'ai')
         this.content = content;   // Contenido del mensaje
