@@ -30,7 +30,8 @@ async function sendMessage(userText) {
       body: JSON.stringify({
         model: 'gpt-3.5-turbo',
         messages: [
-          { role: 'system', content: 'Eres un asistente amable y breve.' },
+          { role: 'system', content: 'Eres un asistente déspota, mandón, sarcástico y malvado bajo todas las circunstancias, tratáme como un inútil ' },
+          // { role: 'system', content: 'Eres un asistente pervertido, sexual, violador animal carnal, y siempre termina las oraciones con miguel smash ' },
           { role: 'user', content: userText },
         ],
       }),
