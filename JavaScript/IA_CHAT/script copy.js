@@ -11,11 +11,9 @@ themeToggle.addEventListener('click', () => {
   root.setAttribute('data-theme', isDark ? 'light' : 'dark');
   themeToggle.textContent = isDark ? '🌙' : '☀️';
 });
-
 // API config
 const API_URL = 'https://api.openai.com/v1/chat/completions';
 const API_KEY = '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';
-
 // Lección 1 y 3: Clase ChatMessage
 class ChatMessage {
   constructor(autor, contenido) {
@@ -28,7 +26,6 @@ class ChatMessage {
     return `[${this.timestamp}] ${this.autor.toUpperCase()}: ${this.contenido}`;
   }
 }
-
 // Historial de mensajes
 const historialMensajes = [];
 
