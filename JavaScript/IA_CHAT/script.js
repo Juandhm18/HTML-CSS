@@ -51,7 +51,7 @@ function appendMessage(who, text) {
   msg.className = `message ${who}`;
   msg.innerHTML = `<div class="bubble">${text}</div>`;
   messagesEl.appendChild(msg);
-  messagesEl.scrollTop = messagesEl.scrollHeight;
+  messagesEl.scrollTop = messagesEl.scrollHeight;// Auto-scroll al final
 }
 
 form.addEventListener('submit', e => {
