@@ -13,7 +13,7 @@ themeToggle.addEventListener('click', () => {
 });
 // API config
 const API_URL = 'https://api.openai.com/v1/chat/completions';
-const API_KEY = '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';
+const API_KEY = 'TU_API_KEY_AQUI';
 // Lección 1 y 3: Clase ChatMessage
 class ChatMessage {
   constructor(autor, contenido) {
