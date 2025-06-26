@@ -13,7 +13,7 @@ themeToggle.addEventListener('click', () => {
 });
 // API config
 const API_URL = 'https://api.openai.com/v1/chat/completions';
-const API_KEY = 'TU_API_KEY_AQUI';
+// const API_KEY = 'TU_API_KEY_AQUI';
 // Lección 1 y 3: Clase ChatMessage
 class ChatMessage {
   constructor(autor, contenido) {
