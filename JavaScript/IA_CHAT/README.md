@@ -1,4 +1,4 @@
-# 🚀 Proyecto Chat IA - Refactorizado con JavaScript Avanzado
+# 🚀 Proyecto Chat IA 
 
 ## 📋 Descripción del Proyecto
 

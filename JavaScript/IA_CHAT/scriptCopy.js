@@ -1,7 +1,3 @@
-// ========================================
-// LECCIÓN 1: OBJETOS EN JAVASCRIPT
-// ========================================
-
 // Modelo de mensaje como objeto
 class ChatMessage {
   constructor(autor, contenido, timestamp = new Date()) {
@@ -9,7 +5,6 @@ class ChatMessage {
     this.contenido = contenido;
     this.timestamp = timestamp;
   }
-
   // Método para formatear el mensaje (LECCIÓN 3)
   formatear() {
     const hora = this.timestamp.toLocaleTimeString('es-ES', {
@@ -23,24 +18,16 @@ class ChatMessage {
     };
   }
 }
-
 // Historial de conversaciones como array de objetos
 let historialConversaciones = [];
-
-// ========================================
-// LECCIÓN 2: HOISTING, SCOPE, CLOSURES, CALLBACKS
-// ========================================
-
 // HOISTING: Función declarada antes de ser definida
 // Esta función se puede usar antes de su declaración debido al hoisting
 function inicializarChat() {
   console.log('Chat inicializado usando hoisting');
 }
-
 // CLOSURE: Función que cuenta preguntas del usuario
 function crearContadorPreguntas() {
   let contador = 0;
-  
   return {
     incrementar: function() {
       contador++;
@@ -56,13 +43,10 @@ function crearContadorPreguntas() {
     }
   };
 }
-
 const contadorPreguntas = crearContadorPreguntas();
-
 // CALLBACK: Se ejecuta al recibir respuesta de la API
 function procesarRespuestaAPI(respuesta, callback) {
   console.log('Procesando respuesta de la API...');
-  
   // Simular procesamiento
   setTimeout(() => {
     const mensajeProcesado = {
@@ -70,24 +54,17 @@ function procesarRespuestaAPI(respuesta, callback) {
       procesado: true,
       timestamp: new Date()
     };
-    
     if (callback && typeof callback === 'function') {
       callback(mensajeProcesado);
     }
   }, 500);
 }
-
-// ========================================
-// LECCIÓN 3: PROMESAS, ASYNC/AWAIT, PROTOTIPOS, CLASES, MODULARIDAD
-// ========================================
-
 // Configuración de la API
 const API_CONFIG = {
   URL: 'https://api.openai.com/v1/chat/completions',
-  KEY: 'TU_API_KEY_AQUI',
+  KEY: TU_API_KEY,
   MODEL: 'gpt-3.5-turbo'
 };
-
 // Promesa falsa para simular carga de mensajes antiguos
 function cargarMensajesAntiguos() {
   return new Promise((resolve) => {
@@ -102,7 +79,6 @@ function cargarMensajesAntiguos() {
     }, 2000); // Delay artificial de 2 segundos
   });
 }
-
 // Función de autocompletado con setTimeout
 function simularAutocompletado(texto, callback) {
   const sugerencias = [
@@ -111,22 +87,15 @@ function simularAutocompletado(texto, callback) {
     '¿Cuál es la diferencia entre...',
     '¿Me puedes ayudar con...'
   ];
-  
   setTimeout(() => {
     const sugerencia = sugerencias[Math.floor(Math.random() * sugerencias.length)];
     if (callback) callback(sugerencia);
   }, 1000);
 }
-
-// ========================================
-// FUNCIONES MODULARES
-// ========================================
-
 // Función para renderizar mensajes en el DOM
 function renderizarHistorial() {
 const messagesEl = document.getElementById('messages');
   messagesEl.innerHTML = '';
-  
   historialConversaciones.forEach(mensaje => {
     const mensajeFormateado = mensaje.formatear();
     const msg = document.createElement('div');
@@ -139,18 +108,14 @@ const messagesEl = document.getElementById('messages');
     `;
     messagesEl.appendChild(msg);
   });
-  
-  // Auto-scroll al final
-  messagesEl.scrollTop = messagesEl.scrollHeight;
+  messagesEl.scrollTop = messagesEl.scrollHeight;// Auto-scroll al final
 }
-
 // Función para agregar mensaje al historial
 function agregarMensaje(autor, contenido) {
   const mensaje = new ChatMessage(autor, contenido);
   historialConversaciones.push(mensaje);
   renderizarHistorial();
 }
-
 // Función para mostrar estado de carga
 function mostrarEstadoCarga(mensaje = 'Cargando...') {
   const messagesEl = document.getElementById('messages');
@@ -161,7 +126,6 @@ function mostrarEstadoCarga(mensaje = 'Cargando...') {
   messagesEl.scrollTop = messagesEl.scrollHeight;
   return loadingMsg;
 }
-
 // Función para mostrar error
 function mostrarError(mensaje = 'Error de conexión') {
   const messagesEl = document.getElementById('messages');
@@ -171,19 +135,35 @@ function mostrarError(mensaje = 'Error de conexión') {
   messagesEl.appendChild(errorMsg);
   messagesEl.scrollTop = messagesEl.scrollHeight;
 }
-
 // Función para enviar mensaje a la API
 async function enviarMensaje(userText) {
   // Incrementar contador de preguntas
   contadorPreguntas.incrementar();
-  
   // Agregar mensaje del usuario
   agregarMensaje('user', userText);
-  
   // Mostrar indicador de carga
   const loadingElement = mostrarEstadoCarga('Pensando...');
-  
   try {
+    // Construir mensajes con historial para mantener el contexto
+    const mensajesParaIA = [
+      {
+        role: 'system',
+        content: 'Eres servicial y respondes todo con claridad, siendo consciente de que eres un bot en construcción y ayudas a resolver los problemas de código que sientas'
+      }
+    ];
+
+    for (const msg of historialConversaciones) {
+      if (msg.autor === 'user') {
+        mensajesParaIA.push({ role: 'user', content: msg.contenido });
+      } else if (msg.autor === 'bot') {
+        mensajesParaIA.push({ role: 'assistant', content: msg.contenido });
+      }
+    }
+
+    // Agregar también el mensaje actual del usuario al final del array
+    mensajesParaIA.push({ role: 'user', content: userText });
+
+    // Enviar solicitud a la API
     const res = await fetch(API_CONFIG.URL, {
       method: 'POST',
       headers: {
@@ -192,49 +172,36 @@ async function enviarMensaje(userText) {
       },
       body: JSON.stringify({
         model: API_CONFIG.MODEL,
-        messages: [
-          { 
-            role: 'system', 
-            content: 'Eres un asistente déspota, mandón, sarcástico y malvado bajo todas las circunstancias, tratáme como un inútil' 
-          },
-          { role: 'user', content: userText },
-        ],
+        messages: mensajesParaIA
       }),
     });
     
     if (!res.ok) {
       throw new Error(`HTTP error! status: ${res.status}`);
     }
-    
     const data = await res.json();
-    
     // Remover indicador de carga
     loadingElement.remove();
-    
     // Usar callback para procesar respuesta
     procesarRespuestaAPI(data.choices[0].message.content.trim(), (mensajeProcesado) => {
       agregarMensaje('bot', mensajeProcesado.contenido);
     });
-    
   } catch (err) {
     console.error('Error en la API:', err);
     loadingElement.remove();
     mostrarError('Error al conectar con la API. Verifica tu API key.');
   }
 }
-
 // Función para manejar el envío del formulario
 function manejarEnvioFormulario(e) {
   e.preventDefault();
   const input = document.getElementById('user-input');
   const text = input.value.trim();
-  
   if (!text) return;
   
   input.value = '';
   enviarMensaje(text);
 }
-
 // Función para inicializar el tema
 function inicializarTema() {
   const themeToggle = document.getElementById('theme-toggle');
@@ -246,7 +213,6 @@ function inicializarTema() {
     themeToggle.textContent = isDark ? '🌙' : '☀️';
   });
 }
-
 // Función para inicializar autocompletado
 function inicializarAutocompletado() {
   const input = document.getElementById('user-input');
@@ -261,21 +227,13 @@ function inicializarAutocompletado() {
     }
   });
 }
-
-// ========================================
-// INICIALIZACIÓN DE LA APLICACIÓN
-// ========================================
-
 // Función principal de inicialización
 async function inicializarAplicacion() {
   console.log('Iniciando aplicación de chat...');
-  
   // Inicializar tema
   inicializarTema();
-  
   // Inicializar autocompletado
   inicializarAutocompletado();
-  
   // Cargar mensajes antiguos (promesa falsa)
   try {
     mostrarEstadoCarga('Cargando conversación anterior...');
@@ -286,16 +244,12 @@ async function inicializarAplicacion() {
     console.error('Error cargando mensajes antiguos:', error);
     mostrarError('Error cargando conversación anterior');
   }
-  
   // Configurar evento del formulario
   const form = document.getElementById('chat-form');
   form.addEventListener('submit', manejarEnvioFormulario);
-  
   console.log('Aplicación inicializada correctamente');
 }
-
 // Llamar a la función de inicialización cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', inicializarAplicacion);
-
 // Demostración de hoisting - esta función se puede usar antes de su declaración
 inicializarChat(); 
