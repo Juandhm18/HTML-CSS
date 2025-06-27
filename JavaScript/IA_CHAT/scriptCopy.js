@@ -63,7 +63,7 @@ function procesarRespuestaAPI(respuesta, callback) {
 const API_CONFIG = {
   URL: 'https://api.openai.com/v1/chat/completions',
   KEY: TU_API_KEY,
-  MODEL: 'gpt-3.5-turbo'
+  MODEL: 'gpt-4.1'
 };
 // Promesa falsa para simular carga de mensajes antiguos
 function cargarMensajesAntiguos() {
